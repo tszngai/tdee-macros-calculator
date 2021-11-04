@@ -5,17 +5,16 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
-const locale = 'en'
+const locale = 'zh-hk'
 
-const Home: NextPage = () => {
+const HomeCantonese: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4085936357096708" crossorigin="anonymous"></script> */}
-        <title>Total Daily Energy Expenditure (TDEE) & Macros Calculator | Fitness | Bulking | Cutting</title>
-        <meta property="og:title"  content="Total Daily Energy Expenditure (TDEE) & Macros Calculator | Fitness | Bulking | Cutting" />
-        <meta name="description" content="Calculate how many calories you burn every day, and learn how much Macros (carbs, fat and protein) you need to consume per day based on your Bulking/Cutting goal." />
-        <meta property="og:description" content="Calculate how many calories you burn every day, and learn how much Macros (carbs, fat and protein) you need to consume per day based on your Bulking/Cutting goal." />
+        <title>每日總消耗熱量(TDEE)和營養素(Macros)計算器 | 健身 | 增肌減脂</title>
+        <meta property="og:title"  content="每日總消耗熱量(TDEE)和營養素(Macros)計算器 | 健身 | 增肌減脂" />
+        <meta name="description" content="依個計算器可以幫你準確計出你每日消耗嘅總熱量，並根據你增肌（bulking）或減脂（cutting）嘅目標，計出你每日應該攝取幾多碳水，脂肪同埋蛋白質（巨量營養素）。" />
+        <meta property="og:description" content="依個計算器可以幫你準確計出你每日消耗嘅總熱量，並根據你增肌（bulking）或減脂（cutting）嘅目標，計出你每日應該攝取幾多碳水，脂肪同埋蛋白質（巨量營養素）。" />
         <link rel="shortcut icon" href="https://www.calculatemacro.com/favicon.ico"/><link rel="icon" href="https://www.calculatemacro.com/favicon.ico"/><link rel="apple-touch-icon" href="https://www.calculatemacro.com/favicon.png" type="image/png"/>
         <link rel="alternate" hreflang="en" href='https://www.calculatemacro.com/' />
         <link rel="alternate" hreflang="zh" href='https://www.calculatemacro.com/zh-tw' />
@@ -34,4 +33,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default HomeCantonese

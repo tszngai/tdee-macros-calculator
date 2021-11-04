@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+div.frf-feedback-container textarea {
+  color: black;
+}

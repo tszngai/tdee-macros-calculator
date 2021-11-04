@@ -1,0 +1,34 @@
+.Container {
+  border-bottom: 1px solid #eaeaea;
+  position: fixed;
+  width: 100%;
+  margin-top: -66px;
+}
+
+.Header {
+  padding: 0.8rem 1.2rem;
+  margin: 0 16rem;
+}
+
+.Home {
+  cursor: pointer;
+}
+
+@media all and (min-width:100px) and (max-width: 1200px) {
+  .Container {
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    margin-top: -66px;
+    width: 100%;
+  }
+
+  .Header {
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 450px) {
+  #homeName {
+    font-size: medium;
+  }
+}

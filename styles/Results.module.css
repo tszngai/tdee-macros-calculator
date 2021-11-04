@@ -1,0 +1,9 @@
+.MacrosTable {
+    padding: 1rem;
+}
+
+@media all and (min-width:100px) and (max-width: 420px) {
+    .MacrosTable {
+      padding: 0;
+    }
+}

@@ -5,17 +5,16 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
-const locale = 'en'
+const locale = 'zh-cn'
 
-const Home: NextPage = () => {
+const HomeChineseSimplified: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4085936357096708" crossorigin="anonymous"></script> */}
-        <title>Total Daily Energy Expenditure (TDEE) & Macros Calculator | Fitness | Bulking | Cutting</title>
-        <meta property="og:title"  content="Total Daily Energy Expenditure (TDEE) & Macros Calculator | Fitness | Bulking | Cutting" />
-        <meta name="description" content="Calculate how many calories you burn every day, and learn how much Macros (carbs, fat and protein) you need to consume per day based on your Bulking/Cutting goal." />
-        <meta property="og:description" content="Calculate how many calories you burn every day, and learn how much Macros (carbs, fat and protein) you need to consume per day based on your Bulking/Cutting goal." />
+        <title>每日总消耗热量(TDEE)和营养素(Macros)计算器 | 健身 | 增肌减脂</title>
+        <meta property="og:title"  content="每日总消耗热量(TDEE)和营养素(Macros)计算器 | 健身 | 增肌减脂" />
+        <meta name="description" content="这个计算器可以帮助您准确地计算出您每天所消耗的总热量，并根据您增肌（bulking）或减脂（cutting）的目标，算出您每天应该摄取的碳水，脂肪和蛋白质（巨量营养素）。" />
+        <meta property="og:description" content="这个计算器可以帮助您准确地计算出您每天所消耗的总热量，并根据您增肌（bulking）或减脂（cutting）的目标，算出您每天应该摄取的碳水，脂肪和蛋白质（巨量营养素）。" />
         <link rel="shortcut icon" href="https://www.calculatemacro.com/favicon.ico"/><link rel="icon" href="https://www.calculatemacro.com/favicon.ico"/><link rel="apple-touch-icon" href="https://www.calculatemacro.com/favicon.png" type="image/png"/>
         <link rel="alternate" hreflang="en" href='https://www.calculatemacro.com/' />
         <link rel="alternate" hreflang="zh" href='https://www.calculatemacro.com/zh-tw' />
@@ -34,4 +33,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default HomeChineseSimplified
