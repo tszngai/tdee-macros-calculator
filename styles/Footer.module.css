@@ -8,7 +8,6 @@
 }
 
 .footer a {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
@@ -17,4 +16,22 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+@media all and (max-width: 423px) {
+  .shareIcons {
+    padding-top: 2rem;
+  }
+  .footerText {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media all and (max-width: 339px) {
+  .shareIcons {
+    padding-top: 3.5rem;
+  }
+  .footerText {
+    padding-bottom: 0.5rem;
+  }
 }

@@ -53,11 +53,13 @@ export type TextFieldTypes =
     'bmrExplained'|
     'calAndMacrosIntake'|
     'calIntakeResult'|
+    'dailyIntakeGoal'|
     'proteinIntakeExplained'|
     'proteinPercentTitle'|
     'macros'|
     'gram'|
     'calories'|
+    'percentageInCalories'|
     'protein'|
     'fat'|
     'carbs'|
@@ -68,7 +70,11 @@ export type TextFieldTypes =
     'sportTips'|
     'feedbackTypes'|
     'postSubmitButtonMsg'|
-    'submitButtonMsg'
+    'submitButtonMsg'|
+    'website'|
+    'shareMsg'|
+    'shareTag'|
+    'tumblrTags'
 export type LocaleTypes = 'zh'|'zh-hk'|'zh-cn'|'en'
 export type AnswersType = {
     unit: string|number,

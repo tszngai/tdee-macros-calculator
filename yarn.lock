@@ -2900,6 +2900,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+next-share@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.12.2.tgz#209e20c04d4e3e1e93f0b3d731142347bae9648e"
+  integrity sha512-Eklbhcvyx51HZAvdDUFmI3YowamiVgoVpY7xOylENDttG0bdFxlF9iol9g6zoU0fLSAhDuZkdEurNcFFKVKu9Q==
+
 next@11.1.2:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/next/-/next-11.1.2.tgz#527475787a9a362f1bc916962b0c0655cc05bc91"

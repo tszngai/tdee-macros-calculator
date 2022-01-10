@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       <Main locale={locale} />
 
-      <Footer />
+      <Footer locale={locale} />
     </div>
   )
 }

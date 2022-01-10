@@ -37,6 +37,7 @@ import translate from '../lib/translate'
 
 const Results = props => {
     const [calIntake, setCalIntake] = useState(0)
+    const [calculatedCalIntake, setCalculatedCalIntake] = useState(0)
     const [proteinPercent, setProteinPercent] = useState(30)
     const [proteinCal, setProteinCal] = useState(0)
     const [fatCarbsRatio, setFatCarbsRatio] = useState(40)
@@ -46,6 +47,7 @@ const Results = props => {
     useEffect(() => {
         let intake = Math.round(props.tdee * (1 + parseFloat(props.savedAnswers.goal)))
         setCalIntake(intake)
+        setCalculatedCalIntake(intake)
     }, [props.savedAnswers])
 
     useEffect(() => {
@@ -146,7 +148,22 @@ const Results = props => {
             <Box w='100%' padding='1rem'>
                 <span style={{fontWeight: 'bold', fontSize: 'xx-large'}}>{translate('calAndMacrosIntake', props.locale)}</span>
                 <br />
-                {translate('calIntakeResult', props.locale, {calIntake: calIntake.toLocaleString()})}
+                {translate('calIntakeResult', props.locale, {calIntake: calculatedCalIntake.toLocaleString()})}
+                <FormControl id="calIntake" w='100%' paddingTop='1rem'>
+                    <FormLabel>{translate('dailyIntakeGoal', props.locale)}</FormLabel>
+                    <NumberInput
+                        w='100%'
+                        max={999999} min={0}
+                        value={calIntake}
+                        onChange={val => {setCalIntake(parseFloat(val))}}
+                    >
+                        <NumberInputField />
+                        <NumberInputStepper>
+                            <NumberIncrementStepper />
+                            <NumberDecrementStepper />
+                        </NumberInputStepper>
+                    </NumberInput>
+                </FormControl>
                 <br /><br />
                 {translate('proteinIntakeExplained', props.locale)}
             </Box>
@@ -166,29 +183,33 @@ const Results = props => {
                 </NumberInput>
             </FormControl>
             <Box w='100%' className={styles.MacrosTable}>
-                <Table size='md' colorScheme='gray' maxW='90%'>
+                <Table size='sm' colorScheme='gray' maxW='90%'>
                     <Thead>
                         <Tr>
                             <Th>{translate('macros', props.locale)}</Th>
                             <Th isNumeric>{translate('gram', props.locale)}</Th>
                             <Th isNumeric>{translate('calories', props.locale)}</Th>
+                            <Th isNumeric>{translate('percentageInCalories', props.locale)}</Th>
                         </Tr>
                     </Thead>
                     <Tbody fontWeight='bold'>
                         <Tr>
-                            <Td fontSize='lg'>{translate('protein', props.locale)}</Td>
+                            <Td fontSize='lg' className={styles.MacrosName}>{translate('protein', props.locale)}</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(proteinCal / 4).toLocaleString()} g</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(proteinCal).toLocaleString()}</Td>
+                            <Td isNumeric fontSize='lg'>{proteinPercent}%</Td>
                         </Tr>
                         <Tr>
-                            <Td fontSize='lg'>{translate('fat', props.locale)}</Td>
+                            <Td fontSize='lg' className={styles.MacrosName}>{translate('fat', props.locale)}</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(fatCal / 9).toLocaleString()} g</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(fatCal).toLocaleString()}</Td>
+                            <Td isNumeric fontSize='lg'>{(100 - proteinPercent) * fatCarbsRatio / 100}%</Td>
                         </Tr>
                         <Tr>
-                            <Td fontSize='lg'>{translate('carbs', props.locale)}</Td>
+                            <Td fontSize='lg' className={styles.MacrosName}>{translate('carbs', props.locale)}</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(carbsCal / 4).toLocaleString()} g</Td>
                             <Td isNumeric fontSize='lg'>{Math.round(carbsCal).toLocaleString()}</Td>
+                            <Td isNumeric fontSize='lg'>{(100 - proteinPercent) * (100 - fatCarbsRatio) / 100}%</Td>
                         </Tr>
                     </Tbody>
                 </Table>

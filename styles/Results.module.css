@@ -7,3 +7,15 @@
       padding: 0;
     }
 }
+
+@media all and (max-width: 454px) {
+  .MacrosTable Th {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media all and (max-width: 318px) {
+  .MacrosName {
+    writing-mode: vertical-rl;
+  }
+}

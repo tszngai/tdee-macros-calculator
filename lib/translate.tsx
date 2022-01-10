@@ -401,24 +401,30 @@ const translate = (field : TextFieldTypes, locale: LocaleTypes, props={}) => {
         'calIntakeResult': {
             'zh': (
                 <span>
-                    根據您的健身目標，您的<span style={{fontWeight: 'bold', fontSize: 'x-large'}}>每天總攝入卡路里</span>應控制在 <span style={{fontWeight: 'bold', fontSize: 'xx-large'}}>{props.calIntake}</span> 卡左右。
+                    根據您的健身目標，建議您應該把<span style={{fontWeight: 'bold'}}>每天總攝入卡路里</span>控制在 <span style={{fontWeight: 'bold', fontSize: 'x-large'}}>{props.calIntake}</span> 卡左右。當然，您也可以根據自己的情況，在下方的輸入框調整這個數值：
                 </span>
             ),
             'zh-hk': (
                 <span>
-                    根據你嘅健身目標，你嘅<span style={{fontWeight: 'bold', fontSize: 'x-large'}}>每天總攝入卡路里</span>應該控制喺 <span style={{fontWeight: 'bold', fontSize: 'xx-large'}}>{props.calIntake}</span> 卡左右。
+                    根據你嘅健身目標，建議你應該將<span style={{fontWeight: 'bold'}}>每日總攝入卡路里</span>控制喺 <span style={{fontWeight: 'bold', fontSize: 'x-large'}}>{props.calIntake}</span> 卡左右。不過當然，你亦都可以根據自己嘅情況，喺下方輸入框調整呢個數值：
                 </span>
             ),
             'zh-cn': (
                 <span>
-                    根据您的健身目标，您的<span style={{fontWeight: 'bold', fontSize: 'x-large'}}>每天总摄入卡路里</span>应控制在 <span style={{fontWeight: 'bold', fontSize: 'xx-large'}}>{props.calIntake}</span> 卡左右。
+                    根据您的健身目标，建议您应该把<span style={{fontWeight: 'bold'}}>每天总摄入卡路里</span>控制在 <span style={{fontWeight: 'bold', fontSize: 'x-large'}}>{props.calIntake}</span> 卡左右。当然，您也可以根据自己的情况，在下方的输入框调整这个数值：
                 </span>
             ),
             'en': (
                 <span>
-                    Based on you fitness goal, your <span style={{fontStyle: 'italic', fontSize: 'large'}}>Total Daily Calories Intake</span> is <span style={{fontWeight: 'bold', fontSize: 'xx-large'}}>{props.calIntake}</span>.
+                    Based on you fitness goal, your suggested <span style={{fontStyle: 'italic'}}>Total Daily Calories Intake</span> is <span style={{fontWeight: 'bold', fontSize: 'large'}}>{props.calIntake}</span>. If you want, you could adjust this value in the input box below:
                 </span>
             ),
+        },
+        'dailyIntakeGoal': {
+            'zh': '目標每天總攝入卡路里：',
+            'zh-hk': '目標每日總攝入卡路里：',
+            'zh-cn': '目标每天总摄入卡路里：',
+            'en': 'Total Daily Calories Intake:',
         },
         'proteinIntakeExplained': {
             'zh': '每天蛋白質的攝入量建議為您總攝入卡路里的30%。' +
@@ -461,6 +467,12 @@ const translate = (field : TextFieldTypes, locale: LocaleTypes, props={}) => {
             'zh-hk': '卡路里',
             'zh-cn': '卡路里',
             'en': 'Calories',
+        },
+        'percentageInCalories': {
+            'zh': '卡路里百分比',
+            'zh-hk': '卡路里百分比',
+            'zh-cn': '卡路里百分比',
+            'en': 'Calories%',
         },
         'protein': {
             'zh': '蛋白質',
@@ -651,6 +663,30 @@ const translate = (field : TextFieldTypes, locale: LocaleTypes, props={}) => {
             'zh-hk': '發送 👋',
             'zh-cn': '发送 👋',
             'en': 'Send Feedback 👋',
+        },
+        'website': {
+            'en': 'https://www.calculatemacro.com/',
+            'zh': 'https://www.calculatemacro.com/zh-tw',
+            'zh-hk': 'https://www.calculatemacro.com/zh-hk',
+            'zh-cn': 'https://www.calculatemacro.com/zh-cn'
+        },
+        'shareMsg': {
+            'en': 'How many Calories should you eat per day? And how should you distribute them among carbs, fat and protein? Whether you are planning to bulk or cut, this powerful tool will tell you all you need to know about your diet!',
+            'zh': '你每天應該吃多少卡路里，多少碳水、脂肪和蛋白質？無論你想增肌還是減脂，這個簡單又好用的網站都能告訴你答案！',
+            'zh-hk': '你每日應該食幾多卡路里，幾多碳水、脂肪同蛋白質？無論你係想增肌定減脂，呢個簡單又好用嘅網站都答到你！',
+            'zh-cn': '你每天应该吃多少卡路里，多少碳水、脂肪和蛋白质？无论你想增肌还是减脂，这个简单又好用的网站都能告诉你答案！'
+        },
+        'shareTag': {
+            'en': '#sciencediet',
+            'zh': '#科學飲食',
+            'zh-hk': '#科學飲食',
+            'zh-cn': '#科学饮食'
+        },
+        'tumblrTags': {
+            'en': ['science diet', 'calories calculator', 'macros calculator', 'bulking', 'cutting'],
+            'zh': ['科學飲食', '卡路里計算', '增肌', '減脂'],
+            'zh-hk': ['科學飲食', '卡路里計算', '增肌', '減脂'],
+            'zh-cn': ['科学饮食', '卡路里计算', '增肌', '减脂']
         },
     }
     return translations[field][locale]
